@@ -1,0 +1,49 @@
+.toggle-switch {
+    width: 15%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.toggler {
+    background-color: #787EE0;
+    width: 75px;
+    height: 36px;
+    border-radius: 60px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.toggler::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 32px;
+    height: 31px;
+    border-radius: 60px;
+    margin: 2px;
+    transition: 0.2s;
+}
+
+input:checked+.toggler {
+    background-color: #787EE0;
+}
+
+input:checked+.toggler::before {
+    transform: translateX(36px);
+}
+
+input {
+    display: none;
+}
+
+.annually {
+    font-family: "Montserrat";
+    margin-top: 0.4rem;
+}
+
+.monthly {
+    font-family: "Montserrat";
+    margin-top: 0.4rem;
+}
